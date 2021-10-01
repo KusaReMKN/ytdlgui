@@ -9,6 +9,7 @@
 // Windows ヘッダー ファイル
 #include <windows.h>
 #include <strsafe.h>
+#include <commdlg.h>
 // C ランタイム ヘッダー ファイル
 #include <stdlib.h>
 #include <malloc.h>
