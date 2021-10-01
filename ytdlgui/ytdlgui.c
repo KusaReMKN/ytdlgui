@@ -13,36 +13,6 @@ int APIENTRY _tWinMain(HINSTANCE hInst, HINSTANCE hPInst, LPTSTR lpCmdLine, int 
 	return DialogBox(hInst, MAKEINTRESOURCE(IDD_MAIN), NULL, MainDlg);
 }
 
-INT_PTR CALLBACK MainWin(HWND hDlg, UINT msg, WPARAM wPrm, LPARAM lPrm)
-{
-	UNREFERENCED_PARAMETER(lPrm);
-
-	switch (msg) {
-
-	}
-
-	return (INT_PTR)FALSE;
-}
-
-// バージョン情報ボックスのメッセージ ハンドラーです。
-INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
-{
-	switch (message)
-	{
-	case WM_INITDIALOG:
-		return (INT_PTR)TRUE;
-
-	case WM_COMMAND:
-		if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-		{
-			EndDialog(hDlg, LOWORD(wParam));
-			return (INT_PTR)TRUE;
-		}
-		break;
-	}
-	return (INT_PTR)FALSE;
-}
-
 INT_PTR CALLBACK MainDlg(HWND hDlg, UINT msg, WPARAM wPrm, LPARAM lPrm)
 {
 	switch (msg) {
